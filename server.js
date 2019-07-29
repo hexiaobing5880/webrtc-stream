@@ -100,8 +100,8 @@ app._io.on('disconnect', (sock) => {
     console.log(`disconnect id => ${users}`);
 });
 
-// 在端口8089监听:
-let port = 8089;
+// 在端口8080监听:
+let port = process.env.PORT || 8080;
 app.listen(port, _ => {
     console.log('app started at port ...' + port);
 });
